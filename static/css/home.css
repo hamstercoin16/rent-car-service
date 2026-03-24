@@ -1,0 +1,146 @@
+
+header {
+    background: #1a1a1a;
+    color: #fff;
+    margin: -1.5rem -2rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 1rem;
+    border-bottom: 1px solid #333;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.burger-menu {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-title {
+
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.05em;
+}
+
+.logo-subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: #c8401a;
+    text-transform: uppercase;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-right a {
+    color: #c8401a;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.lang {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.lang a {
+    color: #aaa;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.lang a.active {
+    color: #fff;
+    font-weight: 500;
+}
+
+.hero {
+    text-align: center;
+    padding: 6rem 5rem 4rem;
+    background: url("../../media/homepage/top-bar.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.hero h1 {
+   ;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.05em;
+    border: none;
+    padding: 0;
+    margin: 0 0 0.8rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+.hero .accent {
+    color: #c8401a;
+    font-weight: 500;
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-left: 0.5rem;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    opacity: 0.88;
+    transition: transform 0.2s ease, filter 0.2s ease, opacity 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-2px);
+
+    opacity: 1.11;
+}
+
+.telegram {
+    background-image: url("../../media/homepage/telegram-logo.png");
+}
+
+.instagram {
+    background-image: url("../../media/homepage/instagram-logo.png");
+}
