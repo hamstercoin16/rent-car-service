@@ -1,0 +1,13 @@
+# IDE JetBrains
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Linux temp files
+*~
+*.swp
+*.swo
+
+# Logs
+*.log
