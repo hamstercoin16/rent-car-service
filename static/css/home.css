@@ -1,8 +1,11 @@
+body {
+    overflow-x: hidden;
+}
 
 header {
     background: #1a1a1a;
     color: #fff;
-    margin: -1.5rem -2rem 0;
+    margin: -1.5rem -2rem 0
 }
 
 nav {
@@ -26,8 +29,6 @@ nav {
     font-size: 1.5rem;
     cursor: pointer;
 }
-
-
 
 
 .logo {
@@ -83,14 +84,10 @@ nav {
 .hero {
     text-align: center;
     padding: 6rem 5rem 4rem;
-    background: url("../../media/homepage/top-bar.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background: url("../../media/homepage/top-bar.gif") no-repeat center center / cover;
 }
 
-.hero h1 {
-   ;
+.hero h1 {;
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 700;
     color: #fff;
@@ -143,4 +140,87 @@ nav {
 
 .instagram {
     background-image: url("../../media/homepage/instagram-logo.png");
+}
+
+
+.Car_type_choice {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.Car_type_choice h4 {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: -40px;
+}
+
+.Car_type_choice > div {
+    width: 220px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 15px;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+}
+
+/* Effect on hover */
+.Car_type_choice > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.Car_type_choice > div span {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 3px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+}
+
+
+#Economy_class_choice {
+    background-image: url("../../media/homepage/economy_class_choice.jpg");
+}
+
+#Middle_class_choice {
+    background-image: url("../../media/homepage/middle_class_choice.jpg");
+}
+
+#Business_class_choice {
+    background-image: url("../../media/homepage/business_class_choice.jpg");
+}
+
+#Premium_class_choice {
+    background-image: url("../../media/homepage/premium_class_choice.jpg");
+}
+
+#Electric_cars_choice {
+    background-image: url("../../media/homepage/electric_cars_choice.jpg");
 }
