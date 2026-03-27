@@ -5,7 +5,7 @@ body {
 header {
     background: #1a1a1a;
     color: #fff;
-    margin: -1.5rem -2rem 0
+    margin: -1.5rem -2rem 0;
 }
 
 nav {
@@ -30,7 +30,6 @@ nav {
     cursor: pointer;
 }
 
-
 .logo {
     display: flex;
     flex-direction: column;
@@ -38,7 +37,6 @@ nav {
 }
 
 .logo-title {
-
     font-size: 1.6rem;
     font-weight: 700;
     color: #fff;
@@ -82,31 +80,55 @@ nav {
 }
 
 .hero {
-    text-align: center;
-    padding: 6rem 5rem 4rem;
-    background: url("../../media/homepage/top-bar.gif") no-repeat center center / cover;
+    padding: 0 2rem;
+    position: relative;
+    height: 75vh;
+    min-height: 600px;
+    background: url("../../media/homepage/top-bar.jpeg") no-repeat right center / cover;
 }
 
-.hero h1 {;
+.hero-text {
+    position: absolute;
+    top: 5%;
+    right: 20%;
+    max-width: 600px;
+    text-align: right;
+}
+
+.hero h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 700;
     color: #fff;
-    letter-spacing: 0.05em;
-    border: none;
-    padding: 0;
-    margin: 0 0 0.8rem;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    margin: 0 0 1rem;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 1);
 }
 
-.hero p {
-    font-size: 1.2rem;
+.hero h4 {
+    font-size: clamp(1rem, 2vw, 1.5rem);
     color: #fff;
-    padding: 0;
+    line-height: 1.4;
     margin: 0;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
-.hero .accent {
-    color: #c8401a;
-    font-weight: 500;
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+        min-height: 500px;
+        background-position: right center;
+    }
+
+    .hero-text {
+        top: 17%;
+        left: 10%;
+        right: 10%;
+    }
+
+    .hero h1 {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
 }
 
 .social-media {
@@ -130,7 +152,6 @@ nav {
 
 .social-icon:hover {
     transform: translateY(-2px);
-
     opacity: 1.11;
 }
 
@@ -142,7 +163,6 @@ nav {
     background-image: url("../../media/homepage/instagram-logo.png");
 }
 
-
 .Car_type_choice {
     display: flex;
     flex-wrap: wrap;
@@ -152,7 +172,6 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 
 .Car_type_choice h4 {
     flex-basis: 100%;
@@ -182,12 +201,10 @@ nav {
     overflow: hidden;
 }
 
-/* Effect on hover */
 .Car_type_choice > div:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
-
 
 .Car_type_choice > div span {
     background: rgba(255, 255, 255, 0.2);
@@ -203,7 +220,6 @@ nav {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     white-space: nowrap;
 }
-
 
 #Economy_class_choice {
     background-image: url("../../media/homepage/economy_class_choice.jpg");
