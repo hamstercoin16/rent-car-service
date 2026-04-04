@@ -12,7 +12,6 @@
 <!-- ### HEADER ### -->
 <header>
     <nav>
-
         <div class="nav-left">
             <button class="burger-menu">&#9776;</button>
             <div class="logo">
@@ -22,7 +21,7 @@
         </div>
 
         <div class="nav-right">
-            <a href="tel:+48123456789">+48 (123) 456-78-90</a>
+            <a href="tel:+48123456789" class="phone-link">+48 (123) 456-78-90</a>
             <div class="lang">
                 <a href="#">pl</a>
                 <a href="#">ru</a>
@@ -36,11 +35,46 @@
     </nav>
 
     <div class="hero">
-        <div class="hero-text">
-            <h1>Warsaw Rental Car:<br>The excellent choice <br>for personal use</h1>
-        </div>
-    </div>
 
+        <div class="hero-text">
+            <h1>WARSAW RENTAL CAR:<br>
+                <span>The perfect choice</span><br>
+                <span>for your personal use</span>
+            </h1>
+            <h3>Book a car in minutes at the best prices.</h3>
+        </div>
+
+        <div class="booking-widget">
+            <h2>Book your car</h2>
+
+            <div class="dates-row">
+                <div class="input-group">
+                    <label class="label-heading" for="pickup-date">Pickup Date</label>
+                    <input type="date" id="pickup-date" name="pickup-date">
+                </div>
+                <div class="input-group">
+                    <label class="label-heading" for="return-date">Return Date</label>
+                    <input type="date" id="return-date" name="return-date">
+                </div>
+            </div>
+
+
+
+            <div class="class-selection">
+                <h4>Choose your class</h4>
+                <select>
+                    <option value="economy">Economy class</option>
+                    <option value="comfort" selected>Comfort class</option>
+                    <option value="business">Business class</option>
+                    <option value="premium">Premium class</option>
+                    <option value="electric">Electric cars</option>
+                </select>
+            </div>
+
+            <button type="submit" class="cta-button">Check Availability</button>
+        </div>
+
+    </div>
 </header>
 
 
