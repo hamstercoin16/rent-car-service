@@ -8,13 +8,17 @@ html, body {
     width: 100%;
     overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #0f0f0f;
+    color: white;
+
 }
 
-header {
+.top-bar {
     background: #1a1a1a;
     color: #fff;
     width: 100%;
+    position: fixed;
+    z-index: 9999;
 }
 
 nav {
@@ -24,6 +28,7 @@ nav {
     padding: 1rem 5%;
     border-bottom: 1px solid #333;
     min-height: 80px;
+
 }
 
 .nav-left {
@@ -56,7 +61,7 @@ nav {
 .logo-subtitle {
     font-size: 0.65rem;
     letter-spacing: 0.2em;
-    color: #c8401a;
+    color: #D4A373;
     text-transform: uppercase;
 }
 
@@ -67,7 +72,7 @@ nav {
 }
 
 .nav-right a {
-    color: #c8401a;
+    color: #D4A373;
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
@@ -93,8 +98,10 @@ nav {
     position: relative;
     height: 80vh;
     min-height: 650px;
-    background: linear-gradient(to right, rgba(0,0,0,0.4), transparent),
-    url("../../media/homepage/herobackground.jpg") no-repeat left center / cover;
+    background:
+            linear-gradient(to bottom, transparent 80%, #0f0f0f 100%),
+            linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, transparent 50%, rgba(0, 0, 0, 0.4) 100%),
+            url("../../media/homepage/herobackground.jpg") no-repeat left center / cover;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -224,9 +231,92 @@ nav {
     gap: 10px;
 }
 
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1500px;
+    width: 95%;
+    margin: 0 auto;
+    top: -100px;
+    position: relative;
+    z-index: 10;
+
+}
+
+.avialable_cars, .advantages-area {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    color: #e0e0e0;
+    width: 95%;
+    margin: auto;
+}
+
+.avialable_cars {
+    flex: 3;
+    min-height: 400px;
+}
+
+.allcars-button {
+    width: 20%;
+    padding: 15px;
+    background: #FFC461;
+    border: none;
+    border-radius: 6px;
+    color: #1a0f00;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 32px auto 0; 
+    transition: 0.3s;
+    display: block;
+
+
+}
+
+.allcars-button:hover {
+    transform: translateY(-0.5px);
+    box-shadow: 0 8px 28px rgba(212, 163, 48, 0.4);
+}
+
+.advantages-area {
+    flex: 1;
+    max-width: 350px;
+}
+
+.advantages-area h2{
+    padding: 8px;
+}
+
+.advantages-area p {
+    font-weight: 400;
+    line-height: 1.6;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.Car_class_choice h4 {
+    color: #f0f0f0;
+}
+
+.advantages-area h3 {
+    color: #f0f0f0;
+}
+
+.advantages-area p {
+    color: #aaa;
+}
+
 
 @media (max-width: 768px) {
     .hero {
+        padding-top: 150px;
         height: auto;
         min-height: 450px;
         flex-direction: column;
@@ -275,6 +365,33 @@ nav {
     .booking-widget button {
         margin-top: 5px;
     }
+
+    .avialable_cars {
+        padding-top: 10px;
+        height: auto;
+        min-height: 450px;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-position: 32% center;
+        margin: 0 auto;
+        top: -300px;
+
+    }
+
+    .main-content {
+        top: -20px;
+        flex-direction: column;
+    }
+
+    .allcars-button {
+        width: 50%;
+        padding: 10px;
+    }
+    .advantages-area{
+        max-width: 800px;
+        width: 95%;
+        margin: auto;
+    }
 }
 
 
@@ -310,63 +427,81 @@ nav {
     background-image: url("../../media/homepage/instagram-logo.png");
 }
 
-.Car_type_choice {
+.decorate-line {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+
+}
+
+.decorate-line::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 85%;
+    height: 3px;
+    background-color: #E4B363;
+    border-radius: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.Car_class_choice {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.Car_class_choice h4 {
+    text-align: center;
+    margin-bottom: 25px;
+    width: 100%;
+    font-size: 25px;
+}
+
+.car-types-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 50px;
+    width: 100%;
 }
 
-.Car_type_choice h4 {
-    flex-basis: 100%;
-    text-align: center;
-    margin-bottom: -40px;
-}
-
-.Car_type_choice > div {
-    width: 220px;
-    height: 150px;
+.car-card {
+    flex: 0 1 250px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     padding-bottom: 15px;
-    color: white;
-    font-weight: bold;
-    font-family: sans-serif;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-    text-align: center;
-    background-size: cover;
-    background-position: left center;
-    background-repeat: no-repeat;
     border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
     overflow: hidden;
 }
 
-.Car_type_choice > div:hover {
+.car-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.Car_type_choice > div span {
-    background: rgba(255, 255, 255, 0.2);
+.car-card span {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    padding: 3px 20px;
+    padding: 5px 15px;
     border-radius: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
-    font-family: sans-serif;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     white-space: nowrap;
+    z-index: 2;
 }
+
 
 #Economy_class_choice {
     background-image: url("../../media/homepage/economy_class_choice.jpg");
@@ -386,4 +521,8 @@ nav {
 
 #Electric_cars_choice {
     background-image: url("../../media/homepage/electric_cars_choice.jpg");
+}
+
+#Compact_cars_choice {
+    background-image: url("../../media/homepage/compact_class_chioce.jpg");
 }
