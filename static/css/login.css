@@ -1,0 +1,301 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: #0f0f0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    background: #0f0f0f;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.page::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-10%);
+    width: 700px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(212, 163, 48, 0.08) 0%, transparent 65%);
+    pointer-events: none;
+}
+
+.topbar {
+    padding: 24px 36px;
+}
+
+.logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.14em;
+    color: #fff;
+    user-select: none;
+}
+
+.logo .accent { color: #D4AF37; }
+
+.body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem 3rem;
+}
+
+.card {
+    background: linear-gradient(145deg, #1a1612 0%, #12100d 100%);
+    border: 0.5px solid rgba(212, 163, 80, 0.25);
+    border-radius: 18px;
+    padding: 2.75rem 2.25rem;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #D4AF37 35%, #D4AF37 65%, transparent);
+    opacity: 0.5;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #888;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    transition: color 0.2s;
+}
+
+.back-btn:hover {
+    color: #D4AF37;
+}
+.headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    letter-spacing: 0.06em;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.inp-wrap {
+    position: relative;
+    margin-bottom: 0.75rem;
+}
+
+.inp-wrap input {
+    width: 100%;
+    padding: 13px 16px;
+    background: #1a1a1a;
+    border: 0.5px solid rgba(212, 163, 80, 0.2);
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #e8e8f0;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.inp-wrap input::placeholder { color: rgba(255, 255, 255, 0.22); }
+
+.inp-wrap input:focus {
+    border-color: rgba(212, 163, 80, 0.6);
+    box-shadow: 0 0 0 3px rgba(212, 163, 48, 0.12);
+    background: #0d0d0d;
+}
+
+.inp-wrap input.has-eye { padding-right: 44px; }
+
+.inp-wrap input.error {
+    border-color: rgba(224, 85, 85, 0.6);
+    box-shadow: 0 0 0 3px rgba(224, 85, 85, 0.1);
+}
+
+.eye-btn {
+    position: absolute;
+    right: 12px;
+    top: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.22);
+    font-size: 17px;
+    padding: 2px;
+    border-radius: 4px;
+    transition: color 0.15s;
+    line-height: 1;
+}
+
+.eye-btn:hover { color: #D4AF37; }
+
+.err-msg {
+    display: none;
+    font-size: 11.5px;
+    color: #e05555;
+    margin-top: 5px;
+    align-items: center;
+    gap: 4px;
+}
+
+.err-msg.visible { display: flex; }
+
+.forgot-row {
+    text-align: right;
+    margin-bottom: 1.25rem;
+}
+
+.forgot-row a {
+    font-size: 13px;
+    color: #D4AF37;
+    text-decoration: none;
+    transition: opacity 0.15s;
+}
+
+.forgot-row a:hover { opacity: 0.7; }
+
+.btn-login {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #c49030 0%, #e8b84b 50%, #d4a030 100%);
+    border: none;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a0f00;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0.02em;
+    transition: opacity 0.15s, transform 0.1s;
+    box-shadow: 0 4px 15px rgba(212, 163, 48, 0.3);
+}
+
+.btn-login:hover {
+    opacity: 0.88;
+    box-shadow: 0 8px 28px rgba(212, 163, 48, 0.4);
+}
+.btn-login:active { transform: scale(0.99); }
+.btn-login:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.signup-row {
+    text-align: center;
+    margin-top: 1.25rem;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.32);
+}
+
+.signup-row a {
+    color: #D4AF37;
+    text-decoration: none;
+    transition: opacity 0.15s;
+}
+
+.signup-row a:hover { opacity: 0.75; }
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 1.6rem 0 1.3rem;
+}
+
+.dline { flex: 1; height: 0.5px; background: rgba(255, 255, 255, 0.08); }
+
+.dtxt {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.22);
+    white-space: nowrap;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.soc-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    border: 0.5px solid rgba(212, 163, 80, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.soc-btn:hover {
+    background: rgba(212, 163, 48, 0.08);
+    border-color: rgba(212, 163, 80, 0.4);
+}
+
+.soc-btn svg { width: 20px; height: 20px; }
+
+.success-state {
+    display: none;
+    text-align: center;
+    padding: 2rem 0 1rem;
+    animation: fadeUp 0.4s ease both;
+}
+
+.success-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #c49030, #e8b84b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 26px;
+    color: #1a0f00;
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.35);
+}
+
+.success-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.06em;
+    color: #fff;
+    margin-bottom: 0.4rem;
+}
+
+.success-text {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.36);
+}
