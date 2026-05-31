@@ -254,6 +254,7 @@ nav {
     color: #e0e0e0;
     width: 95%;
     margin: auto;
+    font-family: 'Playfair Display', serif;
 }
 
 .avialable_cars {
@@ -479,14 +480,23 @@ nav {
     background-repeat: no-repeat;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s, border-color 0.3s;
     position: relative;
     overflow: hidden;
 }
 
 .car-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-7px) scale(1.02);
+    box-shadow: 0 16px 36px rgba(0,0,0,0.5), 0 0 0 1px rgba(212,175,55,0.2);
+    border-color: rgba(212,175,55,0.2);
+}
+.car-card::before {
+    background: linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.55) 100%);
+    transition: opacity 0.3s;
+}
+
+.car-card:hover::before {
+    opacity: 0.7;
 }
 
 .car-card span {
@@ -502,6 +512,11 @@ nav {
     z-index: 2;
 }
 
+.car-card:hover span {
+    background: rgba(212,175,55,0.2);
+    border-color: rgba(212,175,55,0.5);
+    transform: translateY(-2px);
+}
 
 /* ── Footer ── */
 .site-footer {
