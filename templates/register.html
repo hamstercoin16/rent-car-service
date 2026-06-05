@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login WRCь</title>
+    <title>Register WRC</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/login.css">
+    <link rel="stylesheet" href="/static/css/register.css">
 </head>
 <body>
 
@@ -23,28 +23,56 @@
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
                     Back to homepage
                 </a>
-                <p class="headline">LOGIN IN ACCOUNT</p>
+                <p class="headline">CREATE ACCOUNT</p>
 
+                <div class="row-two">
+                    <div class="inp-wrap">
+                        <input type="text" id="firstname" placeholder="First Name" autocomplete="given-name">
+                        <span class="err-msg" id="firstname-err">&#9888; Enter your first name</span>
+                    </div>
+                    <div class="inp-wrap">
+                        <input type="text" id="lastname" placeholder="Last Name" autocomplete="family-name">
+                        <span class="err-msg" id="lastname-err">&#9888; Enter your last name</span>
+                    </div>
+                </div>
 
                 <div class="inp-wrap">
                     <input type="email" id="email" placeholder="Email Address" autocomplete="email">
-                    <span class="err-msg" id="email-err">&#9888; Введите корректный email</span>
+                    <span class="err-msg" id="email-err">&#9888; Enter a valid email</span>
                 </div>
 
                 <div class="inp-wrap">
-                    <input type="password" id="password" placeholder="Password" autocomplete="current-password" class="has-eye">
-                    <button class="eye-btn" id="eye-btn" type="button" aria-label="Показать пароль">&#128065;</button>
-                    <span class="err-msg" id="pass-err">&#9888; Пароль не должен быть пустым</span>
+                    <input type="password" id="password" placeholder="Password" autocomplete="new-password" class="has-eye">
+                    <button class="eye-btn" id="eye-btn" type="button" aria-label="Show password">&#128065;</button>
+                    <span class="err-msg" id="pass-err">&#9888; Password must be at least 8 characters</span>
                 </div>
 
-                <div class="forgot-row">
-                    <a href="#">Forgot password?</a>
+                <div class="inp-wrap">
+                    <input type="password" id="password-confirm" placeholder="Confirm Password" autocomplete="new-password" class="has-eye">
+                    <button class="eye-btn" id="eye-btn-confirm" type="button" aria-label="Show password">&#128065;</button>
+                    <span class="err-msg" id="pass-confirm-err">&#9888; Passwords do not match</span>
                 </div>
 
-                <button class="btn-login" id="login-btn" type="button">Log in</button>
+                <div class="strength-wrap" id="strength-wrap">
+                    <div class="strength-bar">
+                        <div class="strength-fill" id="strength-fill"></div>
+                    </div>
+                    <span class="strength-label" id="strength-label">Weak</span>
+                </div>
 
-                <div class="signup-row">
-                    Don't have an account? <a href="register.html">Sign Up</a>
+                <div class="terms-row">
+                    <label class="checkbox-wrap">
+                        <input type="checkbox" id="terms">
+                        <span class="checkmark"></span>
+                        <span class="terms-text">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+                    </label>
+                    <span class="err-msg" id="terms-err">&#9888; You must agree to the terms</span>
+                </div>
+
+                <button class="btn-register" id="register-btn" type="button">Create Account</button>
+
+                <div class="signin-row">
+                    Already have an account? <a href="login.html">Log In</a>
                 </div>
 
                 <div class="divider">
@@ -72,13 +100,14 @@
 
             <div class="success-state" id="success-state">
                 <div class="success-icon">✓</div>
-                <p class="success-title">LOGGED IN!</p>
-                <p class="success-text">Welcome back. Redirecting to your dashboard...</p>
+                <p class="success-title">ACCOUNT CREATED!</p>
+                <p class="success-text">Welcome to WRC. Redirecting to your dashboard...</p>
             </div>
 
         </div>
     </div>
 </div>
+
 
 </body>
 </html>
